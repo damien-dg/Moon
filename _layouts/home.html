@@ -13,7 +13,7 @@ layout: compress
     {% include nav.html %}
     <!-- Header -->
     <header class="header flex" role="banner">
-        <div class="container animated fadeIn">
+        <div class="wrapper animated fadeIn">
             <div class="row">
                     <a href="{{ site.url }}">
                         <img src="{{ site.logo }}" class="img-circle zoombtn animated rotateIn">
@@ -44,6 +44,7 @@ layout: compress
                  </h3>
             </div>
         </div>
+        {% include resume.html %}
     </header>
     {% include scripts.html %}
 </body>
