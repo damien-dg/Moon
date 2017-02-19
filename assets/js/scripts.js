@@ -55,3 +55,10 @@ $(document).ready(function() {
     mainClass: 'mfp-fade'
   });
 });
+
+
+$("#resumeLink").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#resumeBody").offset().top
+    }, 1000);
+});
