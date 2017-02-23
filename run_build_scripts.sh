@@ -4,15 +4,4 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-exec $SHELL << EOF1
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-exec $SHELL << EOF2
-rbenv install 2.3.1
-rbenv global 2.3.1
-
-gem install bundler
-bundle install
-bundle exec jekyll serve --port 8000 --host 0.0.0.0
-EOF2
-EOF1
+exec $SHELL <<< './rbenv.sh'
